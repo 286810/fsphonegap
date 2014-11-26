@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+input {
+    width: 95%;
+    outline: none;
+}
+/*login*/
+.loginForm {
+    transition: all linear 1s;
+    -webkit-transition: all linear 1s;
+}
+.loginForm .item-input .error {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    font-size: 14px;
+}
+.ng-pristine + .error {
+    display: none;
+}

@@ -1,0 +1,52 @@
+
+    <ion-tabs class="tabs-positive tabs-icon-only">
+
+        <ion-tab title="登录">
+            <form name="loginForm" class="loginForm" >
+
+                <div class="list">
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">
+                            手机/邮箱
+                        </span>
+
+                        <input name="userName" type="text" ng-model="user.name" placeholder="手机/邮箱" required>
+                        <span class="error assertive" ng-show="loginForm.userName.$error.required">猪头</span>
+                    </label>
+                    <label class="item item-input item-floating-label">
+                        <span class="input-label">密码</span>
+                        <input name="userPwd" type="password" ng-model="user.pwd" placeholder="密码" required>
+                        <span class="error assertive" ng-show="loginForm.userPwd.$error.required">猪头</span>
+                    </label>
+
+                    <div class="error assertive padding" ng-show="loginerr">用户名或密码错误</div>
+                </div>
+
+                <p class="padding">
+                    <button ng-click="login()" class="button button-block button-positive">登录</button>
+                </p>
+            </form>
+        </ion-tab>
+
+        <ion-tab title="注册">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">手机</span>
+                    <input type="text" placeholder="手机">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">邮箱</span>
+                    <input type="text" placeholder="邮箱">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">密码</span>
+                    <input type="text" placeholder="密码">
+                </label>
+            </div>
+            <p class="padding">
+                <button class="button button-block button-positive">注册</button>
+            </p>
+        </ion-tab>
+
+    </ion-tabs>
+

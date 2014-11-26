@@ -1,0 +1,15 @@
+
+
+<ion-view title="Dashboard" >
+  <ion-content class="padding">
+    <h1>Dash</h1>
+      <ion-list>
+          <ion-item ng-repeat="item in items track by $index" type="item-text-wrap" href="#/tab/dash/{{item.id}}">
+              {{item.name}}
+          </ion-item>
+      </ion-list>
+      <p class="padding">
+          <button ng-click="logout()" class="button button-block button-positive">退出</button>
+      </p>
+  </ion-content>
+</ion-view>

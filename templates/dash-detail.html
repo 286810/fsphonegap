@@ -1,0 +1,82 @@
+<ion-view title="{{item.name}}">
+    <ion-content has-header="true" padding="true" class="has-header center">
+
+        <h1 class="header">二维码扫描</h1>
+        <p class="description">
+            跨平台扫描功能
+        </p>
+        <button class="button button-block button-calm" on-touch="scanBarcode();">扫描</button>
+        <div>
+            Result: {{text}}    <br>
+            Format: {{format}}  <br>
+            Cancelled: {{cancelled}}    <br>
+            Error: {{error}}    <br>
+        </div>
+
+        <h1 class="header">相机</h1>
+
+        <button ng-click="takePicture();" class="button button-bar-inline button-royal">获取照片</button>
+        <img id="myImg" style="width: 200px;height: 200px;">
+
+        <h1 class="header">日历</h1>
+
+        <button ng-click="captureAudio();" class="button button-bar-inline button-calm">捕获声音</button>
+        <audio id="myAudio"></audio>
+        <button on-touch="captureImage();" class="button button-bar-inline button-assertive">图片</button>
+        <button on-touch="captureVideo();" class="button button-bar-inline button-balanced">录像</button>
+
+        <h1 class="header">剪切板</h1>
+        <p class="description">
+            <input type="text" ng-model="data.t">
+            <button on-touch="copyText(data.t);" class="button button-bar-inline button-positive">copy</button>
+        </p>
+        <div class="list">
+            <label class="item item-input">
+                <input ng-click="pasteText();" type="text" id="ptext" placeholder="paste text here">
+            </label>
+        </div>
+
+        <h1 class="header">联系人</h1>
+        <button on-touch="saveContact();" class="button button-bar-inline button-assertive">保存kobe到联系人</button>
+
+        <h1 class="header">文件</h1>
+        <button ng-click="doFile();" class="button button-bar-inline button-assertive">文件</button>
+
+        <h1 class="header">定位</h1>
+        <div>
+            <strong>getCurrentPosition</strong> <br/>
+            latitude : {{lat}} <br/>
+            longitude : {{long}} <br/>
+        </div>
+        <div>
+            <strong>watchPosition </strong> <br/>
+            latitude : {{watchLat}} <br/>
+            longitude : {{watchLong}} <br/>
+            <br />
+        </div>
+
+        <h1 class="header">网络</h1>
+        <div>
+            网络类型 : {{type}} <br/>
+            是否在线 : {{isOnline}} <br/>
+        </div>
+
+        <h1 class="header">震动</h1>
+        <button ng-click="getVibration();" class="button button-bar-inline button-assertive">震动2s</button>
+
+    </ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
